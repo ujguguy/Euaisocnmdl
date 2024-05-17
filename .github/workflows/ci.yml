@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: "0 5,10,15 * * *"
+    - cron: "0 3,11,4 * * *"
 
 jobs:
   autogreen:
@@ -20,7 +20,7 @@ jobs:
 
       - name: Auto green
         run: |
-          git config --local user.email "gasses-sector0j@icloud.com"
+          git config --local user.email "ujguguy@outlook.com"
           git config --local user.name "${{ github.actor }}"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git pull --rebase
